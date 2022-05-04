@@ -58,7 +58,7 @@
  * Zone JS is required by default for Angular itself.
  */
 import 'zone.js';  // Included with Angular CLI.
-
+import 'aframe';
 (window as any).global = window;
 global.Buffer = global.Buffer || require('buffer').Buffer;
 global.process = require('process');

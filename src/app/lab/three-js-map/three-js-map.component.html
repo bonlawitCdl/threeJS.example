@@ -1,0 +1,33 @@
+<div class="hide">
+    web 3
+    <button (click)="testContact()">testContact</button>
+    <button (click)="testStore()">testStore</button>
+    <button (click)="testRetrieve()">testRetrieve</button>
+    </div>
+    <div>
+        <div>
+            Size X: <input type="number" [(ngModel)]="sizeX">
+            Size Z: <input type="number" [(ngModel)]="sizeZ">
+        </div>
+        <div>
+            <input type="checkbox" [(ngModel)]="enableLine"> Line
+        </div>
+        <div>
+            <input type="checkbox" [(ngModel)]="enableBlackground"> Background
+        </div>
+        <div>
+            <input type="checkbox" [(ngModel)]="randomcolor"> Random Color
+        </div>
+        <div>
+            <button (click)="reRender()">Re-Render</button><button (click)="stop()">Stop-Render</button>
+        </div>
+    
+    </div>
+    <div class="relative">
+        <div class="frame">
+            <div>{{data.name}}</div>
+        </div>
+        <canvas #canvas id="canvas" class="canvasstyle" (click)="evClick($event)" (wheel)="evScroll($event)"></canvas>
+    </div>
+    <div>Camera Zoom: {{cameraZoom}}</div>
+    <div>Block Count: {{blockCount}}</div>
